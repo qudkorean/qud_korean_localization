@@ -4,7 +4,7 @@
   <conversation ID="BaseConversation" Inherits="">
     <!-- Conversation level choices are distributed to all start nodes by default -->
     <choice ID="WaterRitualChoice" IfSpeakerHavePart="GivesRep" IfAllowEscape="true" Target="WaterRitual" Ordinal="980">
-      <text>Your thirst is mine, my water is yours.</text>
+      <text>그대의 갈증이 나의 것이며, 나의 물은 당신의 것이니.</text>
       <text IfHavePart="SociallyRepugnant" Priority="1">
         Swap spittle?~
         Let's get to it.~
@@ -90,7 +90,7 @@
       </choice>
     </node>
     <choice ID="Trade" Ordinal="990">
-      <text>Let's trade.</text>
+      <text>거래를 제안하지.</text>
       <part Name="Trade" />
     </choice>
   </conversation>
@@ -608,12 +608,12 @@
 				Aye, the pest-vanquisher! Live and drink, =name=.
 			</text>
 			<text IfNotHaveQuest="What's Eating the Watervine?">
-				A waterhand? Aye. Live and drink, traveller.
-			</text>			
-			<choice ID="MehmetIntroduce" Target="Name" IfNotFinishedQuest="What's Eating the Watervine?" IfNotHaveState="ToldMehmetName" SetBooleanState="ToldMehmetName,true">I am called =name=.</choice>
-			<choice Target="Village">Can you tell me about your village, Joppa?</choice>
-			<choice Target="Work" IfNotHaveQuest="What's Eating the Watervine?">I am in search of work.</choice>
-			<choice Target="End">Live and drink.</choice>
+				아. 물꾼이로군? 여행자여, 살고 마시게.
+			</text>			 
+			<choice ID="MehmetIntroduce" Target="Name" IfNotFinishedQuest="What's Eating the Watervine?" IfNotHaveState="ToldMehmetName" SetBooleanState="ToldMehmetName,true">난 =name=라고 하네.</choice>
+			<choice Target="Village">당신이 사는 마을 조파에 대해 설명해줄 수 있나?</choice>
+			<choice Target="Work" IfNotHaveQuest="What's Eating the Watervine?">난 일을 찾는 중이네.</choice>
+			<choice Target="End">살고 마시게.</choice>
 		</start>						
 		<node ID="Name" Inherits="Welcome">
 			<text Load="Replace" Priority="1">
