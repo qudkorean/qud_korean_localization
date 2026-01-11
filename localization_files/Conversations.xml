@@ -151,190 +151,190 @@
 	<conversation ID="JoppaFarmerConvert">
 		<start ID="SpeakNoMore" IfTestState="ConvertNoSpeak">
 			<text>
-				There are no more words for us, wanderer.
+				더 이상 할 말은 없다, 방랑자여.
 			</text>
 			<choice Target="End">...</choice>
 		</start>
 		<start ID="SpeakNoMore" IfTestState="ConvertSated">
 			<text>
-				=name=! Live and drink, pilgrim.
+				=name=! 살고 마시게, 순례자여.
 			</text>
-			<choice Target="End">Live and drink.</choice>
+			<choice Target="End">살고 마시게.</choice>
 		</start>
 		<start ID="FinishedPilgrimageQuest" IfFinishedQuest="O Glorious Shekhinah!">
 			<text>
-				=name=! Live and drink, pilgrim.
+				=name=! 살고 마시게, 순례자여.
 			</text>
-			<choice Target="Stilted">I have visited the Six Day Stilt.</choice>
-			<choice Target="End">Live and drink.</choice>
+			<choice Target="Stilted">Six Day Stilt에 방문해 보았네.</choice>
+			<choice Target="End">살고 마시게.</choice>
 		</start>
 		<choice ID="Trade" IfTestState="ConvertSated" Load="Merge"></choice>
 		<node ID="Stilted">
 			<text>
-				Ah!
+				아!
 
-				Tell me, =pronouns.formalAddressTerm=, was it the picture of wonder as I see it in my mind's eye? Were you beauty-struck by its truths?
+				말해보게, =pronouns.formalAddressTerm=, 내가 마음속에서 보았던 형상처럼 경이로운 광경이었나? 그 진실의 아름다움에 넋을 잃었나?
 			</text>
-			<choice Target="Ohh">Truly breathtaking. How the glass glittered in the sun!</choice>
-			<choice Target="Glorious">To behold the Argent Fathers in simulacra... what revelation!</choice>
-			<choice Target="ShakyNah">I saw only empty spectacle. Who can worship a hole in the ground?</choice>
+			<choice Target="Ohh">숨이 벅차오르더군. 태양 아래 반짝이는 그 유리들!</choice>
+			<choice Target="Glorious">형상으로 드러난 Argent Fathers를 보다니… 참된 계시였어!</choice>
+			<choice Target="ShakyNah">내가 본 건 텅 빈 구경거리뿐이었어. 땅에 난 구멍을 누가 숭배하겠나?</choice>
 		</node>
 		<node ID="Ohh">
 			<text>
-				So it's true! O Argent Fathers, how far-reaching your works!
+				그럼 사실이었군! 오, Argent Fathers, 그대들의 업적은 어디까지 미쳐있는가!
 
-				... and my trinket? Did you cast it into the Sacred Well?
+				... 그런데 내 장신구는? 그걸 성스러운 우물에 던졌나?
 			</text>
-			<choice Target="Well">I did.</choice>
-			<choice Target="Lost">Sadly, it was lost.</choice>
-			<choice Target="Flipped">No, I took it apart or sold it or something.</choice>
+			<choice Target="Well">그랬어.</choice>
+			<choice Target="Lost">미안하게도 잃어버렸네.</choice>
+			<choice Target="Flipped">아니, 분해했던가, 팔았던가 대충 그랬을걸.</choice>
 		</node>
 		<node ID="Well">
 			<text>
-				Moon and Sun! The Argent Fathers bless us, our paths are chromed and glistering.
+				달과 태양이여! Argent Fathers께서 우리를 축복하시고, 우리의 길은 크롬으로 입혀져 눈부시게 빛나는구나.
 
-				You have my thanks, =pronouns.formalAddressTerm=. Bel shield you.
+				감사를 표하겠소, =pronouns.formalAddressTerm=. Bel의 가호가 함께하길.
 			</text>
-			<choice Target="End" SetBooleanState="ConvertSated,true">And you as well.</choice>
+			<choice Target="End" SetBooleanState="ConvertSated,true">그대에게도.</choice>
 		</node>
 		<node ID="Lost">
 			<text>
-				Oh, I am leaden with this knowledge. Yet am I soothed by your pilgrimage.
+				오, 모르는게 약이겠군. 그럼에도 자네의 순례는 내 마음을 달래준다네.
 
-				Moon and Sun, I feel the warmth of the Kasaphescence yet. Praise the Argent Fathers.
+				달과 태양이여, 카사페센스의 온기가 아직 느껴진다. Argent Fathers를 찬미하라.
 			</text>
 			<choice Target="End" SetBooleanState="ConvertSated,true">Live and drink.</choice>
 		</node>
 		<node ID="Flipped">
 			<text>
-				Oh, how your words rasp my soul, =player.formalAddressTerm=. You abrade me.
+				오, 당신의 말이 영혼을 긁어내는군, =player.formalAddressTerm=. 상처 받았소.
 
-				Let us speak no more.
+				더 이상 이야기 하고 싶지 않네.
 			</text>
-			<choice Target="End" SetBooleanState="ConvertNoSpeak,true">Very well.</choice>
+			<choice Target="End" SetBooleanState="ConvertNoSpeak,true">좋소.</choice>
 		</node>
 		<node ID="Glorious">
 			<text>
-				So you have seen the truth? Great are the machinations of our Argent Fathers!
+				그렇다면 진실을 보았군? Argent Fathers의 위대한 설계여!
 
-				Our meeting, a tiny Canticle. Fate dances in our shadows by their will and word.
+				우리의 만남은 작은 찬가 하나. 그들의 뜻과 말로 운명이 우리 그림자 속에서 춤추는군.
 
-				Moon and sun, what a day! What a fine day. Praise Shekhinah!
+				달과 태양이여, 최고의 날일세! 참으로 좋은 날이야. Shekhinah를 찬미하라!
 			</text>
-			<choice Target="End" SetBooleanState="ConvertSated,true">Praise Shekhinah!</choice>
+			<choice Target="End" SetBooleanState="ConvertSated,true">Shekhinah를 찬미하라!</choice>
 		</node>
 		<node ID="ShakyNah">
 			<text>
-				Wh-
+				윽-
 
-				My heart's sheen wanes to hear this of you. You abrade me, =player.formalAddressTerm=, I am scuffed.
+				그런 말을 듣자니, 내 마음의 광택이 바래는군. 당신은 나를 긁어놓았고, =player.formalAddressTerm=, 상처 입혔소.
 
-				What of my trinket, then? Did you cast it into the... "hole in the ground?"
+				그럼 내 장신구는 어찌했는가? 그걸… "땅에 난 구멍"에 던지긴 했나?
 			</text>
-			<choice Target="InTheHole">Yes, I threw it in the hole.</choice>
-			<choice Target="LostIt">No, I lost it.</choice>
-			<choice Target="LosingIt">I gave it to someone. Or sold it, perhaps.</choice>
+			<choice Target="InTheHole">그래, 구멍속으로 던졌지.</choice>
+			<choice Target="LostIt">아니, 잃어버렸네.</choice>
+			<choice Target="LosingIt">누군가한테 줬어. 아니면 팔았던가?</choice>
 		</node>
 		<node ID="InTheHole">
 			<text>
-				Well... the light of the Kasaphescence yet glimmers through your rasping edge.
+				흠… 그래도 카사페센스의 빛이, 자네의 거친 날 너머로 아직은 희미하게 비치고 있군.
 
-				I must, then, thank you.
+				그러니, 감사해야만 하겠지.
 			</text>
-			<choice Target="End" SetBooleanState="ConvertSated,true">You're welcome.</choice>
+			<choice Target="End" SetBooleanState="ConvertSated,true">별 말씀을.</choice>
 		</node>
 		<node ID="LostIt">
 			<text>
-				My stomach lurches and quavers at the shock of this knowledge.
+				그 말에 충격으로 속이 뒤틀리고 떨리는군.
 
-				If there is a lesson in your disregard, I will meditate upon it in my own time.
+				당신의 무심함 속에 배울 것이 있다면, 시간이 날 때 곱씹어 보겠소.
 
-				Let us speak no more.
+				더 할말은 없네.
 			</text>
-			<choice Target="End" SetBooleanState="ConvertNoSpeak,true">As you say.</choice>
+			<choice Target="End" SetBooleanState="ConvertNoSpeak,true">그래.</choice>
 		</node>
 		<node ID="LosingIt">
 			<text>
-				Ah, a pit opens under my stomach!
+				아, 배속에 구멍이 생긴 느낌이네!
 
-				Let us speak no more, I beg you. You scuff me. Live and drink.
+				부탁인데, 더 이상 말 걸지 말아주게. 당신이 날 긁었소. 살고 마시게.
 			</text>
-			<choice Target="End" SetBooleanState="ConvertNoSpeak,true">Live and drink.</choice>
+			<choice Target="End" SetBooleanState="ConvertNoSpeak,true">살고 마시게.</choice>
 		</node>
 		<start ID="HasPilgrimageQuest" IfHaveQuest="O Glorious Shekhinah!">
 			<text>
-				Wanderer and =pronouns.formalAddressTerm=! Have you journeyed yet to the Stilt, and seen the Sacred Well?
+				방랑자이자 =pronouns.formalAddressTerm=(이)여! Stilt로 떠나 Sacred Well을 보았는가?
 			</text>
-			<choice Target="End">Not yet, friend. Live and drink.</choice>
+			<choice Target="End">아직이네, 친구여. 살고 마시게.</choice>
 		</start>
 		<start ID="Welcome">
 			<text>
-				Wanderer! Do you venture northwise? Into the Great Desert and nearer the Six Day Stilt?
+				방랑자여! 북쪽으로 모험을 떠나겠나? 대사막 속으로, 더 나아가 Six Day Stilt로?
 			</text>
-			<choice Target="Stilt">What is the Six Day Stilt?</choice>
-			<choice Target="Why">Why do you ask?</choice>
-			<choice Target="End">Live and drink.</choice>
+			<choice Target="Stilt">Six Day Stilt가 뭐지?</choice>
+			<choice Target="Why">왜 나에게 부탁하는거지?</choice>
+			<choice Target="End">살고 마시게.</choice>
 		</start>
 		<node ID="Stilt">
 			<text>
-				Ah! The great Mechanimist temple of glass, the sacred offering Well, and history in stone relief. Peopled by the Argent Fathers, in statue and light sculpture. And circled by the grand bazaar. I hear there are more people there than numbers in the void, and their chatter makes a sound wholly raw and new to the world.
+				아! 유리로 된 거대한 Mechanimist 신전과 성스러운 봉헌의 우물, 돌에 새겨진 역사. 조각과 빛의 형상 속 Argent Fathers들의 사람들. 그리고 거대한 시장에 둘러쌓여있지. 허공의 수보다 많은 사람들이 모여 있고, 그들의 수다는 세상에 없던 새로운 소리를 만든다더군.
 
-				Will you go there, and take my bauble? Will you offer it at the Well, where I cannot?
+				내 장신구를 가지고 그곳에 가 주겠나? 내가 갈수 없는 곳에서 그것을 우물에 바쳐줄 수 있겠는가?
 			</text>
-			<choice Target="Bauble">Your bauble?</choice>			
+			<choice Target="Bauble">당신의 장신구?</choice>			
 			<choice Target="Fathers">Argent Fathers?</choice>
-			<choice Target="WhyNot">Why can you not go?</choice>			
-			<choice Target="Agree">I will make the journey.</choice>
-			<choice Target="End">I cannot commit to this. Live and drink.</choice>
+			<choice Target="WhyNot">왜 당신이 안 가는건가?</choice>			
+			<choice Target="Agree">내가 여정을 떠나겠소.</choice>
+			<choice Target="End">수락 할 수 없소. 살고 마시게.</choice>
 		</node>
 		<node ID="Bauble">
 			<text ID="FindTrinket">
-				Yes! My neighbor-kin tire of the tale. I was scything the vine when the flat of my blade turned something loose from the soil. My heart has stirred before at the sight of chrome, but to free a small splinter myself, to slide a bead on the abacus of Beauty...
+				그렇소! 내 이웃 동족들은 이 이야기에 질렸지. 덩굴을 베던 중, 칼날로 흙에서 무언갈 파냈소. 크롬을 보고 가슴이 움직인 적은 전에도 있었지만, 이렇게 작은 파편을 내 손으로 직접 해방시키다니, 아름다움의 주판에 구슬 하나를 팅긴 느낌이었다오...
         
-        Will you go, then? And offer my bauble at the Well?
+        그곳에 가 줄수 있는가? 그리고 나의 장신구를 우물에 바쳐주겠는가?
 			</text>			
-			<choice Target="WhyNot">Why can you not go?</choice>
-			<choice Target="Stilt" >What is the Six Day Stilt again?</choice>
-			<choice Target="Agree">I will make the journey.</choice>
-			<choice Target="End">I cannot commit to this. Live and drink.</choice>
+			<choice Target="WhyNot">왜 당신이 안 가는건가?</choice>
+			<choice Target="Stilt" >Six Day Stilt가 뭐라고 했었지?</choice>
+			<choice Target="Agree">내가 여정을 떠나겠소.</choice>
+			<choice Target="End">수락 할 수 없소. 살고 마시게.</choice>
 		</node>		
 		<node ID="Fathers" >
 			<text>
-				I am no rector, understand, but They are the molders of chrome. The gods under Shekhinah who wrought metal edifices from the raw Kasaphescence.
+				난 성직자는 아닐세, 이해하게, 하지만 그분들은 크롬을 빚는 자들이야. Shekhinah 아래의 신들로, 원초의 카사페센스에서 금속의 전당들을 만들어낸 존재들입니다.
 
-				Will you go?
+				당신이 가 주겠나?
 			</text>
-			<choice Target="Why">Perhaps. Why?</choice>
-			<choice Target="End">I cannot commit to this. Live and drink.</choice>
+			<choice Target="Why">아마도. 왜?</choice>
+			<choice Target="End">수락 할 수 없소. 살고 마시게.</choice>
 		</node>
 		
 		<node ID="Why">
 			<text>
-				I would ask you make an offering at the sacred Well of my bauble. Moon and sun, I beg you!
+				내 장신구를 가져가 신성한 우물에 던져주길 원하네. 달과 태양이여, 간청하네!
 			</text>
-			<choice Target="WhyNot">Why can you not go?</choice>
-			<choice Target="Stilt" >What is the Six Day Stilt?</choice>
-			<choice Target="Agree">I will make the journey.</choice>
-			<choice Target="End">I cannot commit to this. Live and drink.</choice>
+			<choice Target="WhyNot">왜 당신이 안 가는건가?</choice>
+			<choice Target="Stilt" >Six Day Stilt가 뭐지?</choice>
+			<choice Target="Agree">내가 여정을 떠나겠소.</choice>
+			<choice Target="End">수락 할 수 없소. 살고 마시게.</choice>
 		</node>
 		<node ID="WhyNot">
 			<text ID="KilledInDesert">
-				Friend, I would be a smoldering heap, cooked to death by the ray of a dawnglider! I would be a slug-riddled corpse by the rifles of the Issachari!
+				친구여, 내가 간다면 dawnglider의 광선에 타 죽어 재만 남을 것이오. 아니면 Issachari의 소총에 맞아 구멍투성이 시체가 될게 뻔하네!
 
-				There is no kindness in the Great Desert, and little more in the canyons. I cannot go and live.
+				대사막엔 자비가 없고, 협곡도 크게 다르지 않소. 나는 살아서 돌아올 수 없을걸세.
 			</text>      
-      <choice Target="Stilt" >What is the Six Day Stilt again?</choice>      
-      <choice Target="Agree">I will make the journey.</choice>
-			<choice Target="End">I cannot commit to this. Live and drink.</choice>
+      <choice Target="Stilt" >Six Day Stilt가 뭐라고 했었지?</choice>      
+      <choice Target="Agree">내가 여정을 떠나겠소.</choice>
+			<choice Target="End">수락 할 수 없소. 살고 마시게.</choice>
 		</node>
 		<node ID="Agree">
 			<text>
-				Moon and sun, =pronouns.formalAddressTerm=! You have my deep and many-sided thanks. Here, take the trinket now. And if you're to ever return, let us visit again.
+				달과 태양이여, =pronouns.formalAddressTerm=! 진심으로, 여러 방면의 감사를 전하네. 여기, 장신구를 받게나. 훗날 다시 오게 된다면 또 만날 수 있길.
 
-				Live and drink!
+				살고 마시게!
 			</text>
 			<choice ID="GiveTrinket" Target="End" StartQuest="O Glorious Shekhinah!">
-				<text>Live and drink.</text>
+				<text>살고 마시게.</text>
 				<part Name="ReceiveItem" Table="JoppaConvertTrinket" />
 			</choice>
 		</node>
@@ -748,74 +748,74 @@
   <conversation ID="WardenYrame">
     <node ID="Start">
       <text>
-        Welcome a-Joppa, friend. Stay peacelike, and we stay friends, hyeh? You make trouble, it’s my work a-split you open like a croc.~
-        Elder’s over my right shoulder, chemist a-left. I ask you pick one or turn around. I en’t here for chat.~
-        Live and drink, yonderling.~
-        {{emote|*Yrame grunts.*}}~
-        {{emote|*Yrame nods.*}}~
-        What follows, then?~
-        Got an eyeful, heh?~
-        Well. They en't ended you yet.
+        친구, Joppa에 온 걸 환영한다. 얌전히 있으면 계속 친구로 남을 수 있을걸, 하? 문제를 일으키면, 악어처럼 네 배를 가르는 게 내 일이다.~
+        내 오른쪽 어깨 너머엔 장로, 왼쪽엔 약제사가 있다. 하나 골라 가든지, 아니면 돌아서 나가. 내 일은 잡담하는게 아니거든.~
+        살고 마시게, 외지인.~
+        {{emote|*Yrame이 콧바람을 낸다.*}}~
+        {{emote|*Yrame이 끄덕거린다.*}}~
+        그래서, 다음은 뭐지?~
+        구경 충분히 했나, 허?~
+        흠. 아직 안 죽었군.
       </text>
-      <choice GotoID="Rustwells" IfHaveActiveQuest="Weirdwire Conduit... Eureka!">I must search the Rustwells.</choice>
-      <choice GotoID="Red Rock" IfHaveActiveQuest="What's Eating the Watervine?">Mehmet has bade me travel to Red Rock.</choice>
-      <choice GotoID="Grit Gate" IfHaveActiveQuest="A Canticle for Barathrum">I depart for Grit Gate soon.</choice>
-      <choice GotoID="Stilt" IfHaveActiveQuest="O Glorious Shekhinah!">I journey North, to the Six Day Stilt.</choice>
-      <choice GotoID="Who">Who are you?</choice>
-      <choice GotoID="Warden">What is a Warden?</choice>
-      <choice GotoID="End">Live and drink.</choice>
+      <choice GotoID="Rustwells" IfHaveActiveQuest="Weirdwire Conduit... Eureka!">난 Rustwells를 찾아가야 하지.</choice>
+      <choice GotoID="Red Rock" IfHaveActiveQuest="What's Eating the Watervine?">Mehmet이 내게 Red Rock으로 가달라고 부탁했어.</choice>
+      <choice GotoID="Grit Gate" IfHaveActiveQuest="A Canticle for Barathrum">난 곧 Grit Gate로 떠나네.</choice>
+      <choice GotoID="Stilt" IfHaveActiveQuest="O Glorious Shekhinah!">난 Six Day Stilt로, 북쪽을 향해 여정을 떠나.</choice>
+      <choice GotoID="Who">당신은 누구지?</choice>
+      <choice GotoID="Warden">Warden이 뭔가?</choice>
+      <choice GotoID="End">살고 마시게.</choice>
     </node>
 
     <node ID="Who" Inherits="Start">
-      <text>Called Yrame, Warden a-Joppa. I kill trouble. Don't be trouble.</text>
+      <text>난 Joppa의 Warden, Yram으로 불린다. 난 문제가 될만한 건 죽여. 문제를 일으키지 마.</text>
     </node>
     <node ID="Warden" Inherits="Start">
-      <text>Nigh every settlement a-Qud keeps a Warden. We snuff threats to the peace.</text>
+      <text>커드의 거의 모든 정착지엔 Warden이 있다. 우리는 평화를 위협하는건 뭉개버린다.</text>
     </node>
     <node ID="Rustwells" Inherits="Start">
-      <text>Out East? Uegh. Wouldn't go, I. Git ta Qudzu. Like as rust the pauldrons right off a-shoulders.</text>
+      <text>동쪽이라고? 우웩. 나라면 안 간다. Qudzu가 득실된다고. 어깨 보호구가 녹슬어서 버티지 못해.</text>
     </node>
     <node ID="Red Rock" Inherits="Start">
-      <text>Up North? En't far. See them baboons, you put one's light out for me.</text>
+      <text>북쪽인가? 그리 멀진 않다. 만약 baboons를 본다면 처리해라.</text>
     </node>
     <node ID="Grit Gate" Inherits="Start">
-      <text>Don't say? Well. Fates favor your feet, hyeh.</text>
+      <text>그렇단 말이지? 음. 운명이 네 발길을 봐주는 모양이다, 하.</text>
     </node>
     <node ID="Stilt" Inherits="Start">
-      <text>If you don't get dry-roasted by the fire snakes, ought be a time of times. Better hit all the food stalls for samples, hyeh?</text>
+      <text>불뱀에게 구워지지만 않는다면 꽤나 좋은 시간일거다. 음식 노점들에서 이것저것 시식해보는게 좋을걸, 하?</text>
     </node>
   </conversation>
   <!-- NimaRuda -->
   <conversation ID="Nima Ruda">
     <node ID="Start">
       <text>
-        Ahh, there is a new face. I am Nima Ruda, town apothecary. If your feet point to Qud, you’ll need some of my wares before you go.~
-        Live and drink, wayfarer.~
-        Time and rest are the surest way to dress a wound, but my wares can help if you’re in a hurry.~
-        The Fates watch you, =player.formalAddressTerm=.~
-        Don’t let your nostrums run dry on the road. I have what you need.
+        아, 새로운 얼굴이네. 나는 Nima Ruda, 이 마을의 약제사야. 발길이 커드를 향하고 있다면, 떠나기 전에 내 물건이 좀 필요할 걸.~
+        살고 마시게, 나그네.~
+        상처를 낫게 하는 데엔 시간과 휴식이 가장 확실하지만, 급하다면 내 약들이 도움이 되지.~
+        운명이 당신을 지켜보고 있어, =player.formalAddressTerm=.~
+        여행 중 약이 바닥나지 않게 조심해. 필요한 건 다 갖추고 있어.
       </text>
-      <choice GotoID="Wares">What wares do you offer?</choice>
-      <choice GotoID="Story">Where are you from?</choice>
-      <choice GotoID="End">Live and drink.</choice>
+      <choice GotoID="Wares">어떤 제품을 팔고 있나?</choice>
+      <choice GotoID="Story">당신은 어디 출신이지?</choice>
+      <choice GotoID="End">살고 마시게.</choice>
     </node>
     <node ID="Wares" Inherits="Start">
       <text>
-        Witchwood for pain, bandages for bleeding, yuckwheat and honey for when your guts act up. Coldcaps when I can find them. Why not take a look?
+        진통 효과가 있는 witchwood, 출혈에 효과있는 bandages, 속에 탈이 날 때 쓸 수 있는 yuckwheat와 honey도 있지. 수급이 일정하진 않아. 한번 볼래?
       </text>
     </node>
 
     <node ID="Story" Inherits="Start">
       <text>
-        I grew up right here in Joppa, daughter of the Elder and all. Spent some years delving, but gave it up after a few near escapes and nearly deadly wounds. I’m better suited to herbalism anyway, and my father worries less.
+        난 바로 여기 Joppa에서 자랐고, 장로와 마을 사람 모두의 딸이지. 몇 해 동안은 유적을 탐험해보기도 했지만, 거의 죽을뻔한 위기에서 간신히 살아돌아오기를 반복하다가 그만뒀어. 아무래도 약초 일을 하는게 내 성향에 더 맞고, 그 덕에 아버지도 한시름 놓았어.
       </text>
-      <choice GotoID="Leadership">Will you inherit leadership of Joppa from your father?</choice>
+      <choice GotoID="Leadership">아버지에게서 Joppa의 지도자 자리를 물려받을 생각은 없는가?</choice>
     </node>
     <node ID="Leadership">
       <text>
-        Fates forfend. I would hardly like to lead a village and run a shop at the same time.
+        운명이 막아주길. 마을을 이끄는 것과 가게를 운영하는 걸 동시에 하고싶진 않거든.
       </text>
-      <choice GotoID="End">Fair enough. Live and drink.</choice>
+      <choice GotoID="End">그럴 만 하군. 살고 마시게.</choice>
     </node>
   </conversation>
   <!-- StarppleFarmer -->
@@ -1684,71 +1684,71 @@
 		<choice ID="Trade" IfFinishedQuest="Fetch Argyve Another Knickknack" />					
 		<start ID="MumblingWelcome" IfNotHaveQuest="Fetch Argyve a Knickknack">
 			<text>
-				{{emote|*mumbling*}} ...exceeding mass thresholds, perhaps a ganglionic teleprojector fitted with suspensors...				
+				{{emote|*중얼거림*}} ...질량 한계치를 넘는군, 현가 장치를 단 신경절식 원격 투사기라면 가능할지도...				
 			</text>
 			<choice Target="MumblingWelcome2">...</choice>			
 		</start>
 		<node ID="MumblingWelcome2">
 			<text>
-				Oh, I didn't notice you there. That's because I was ignoring you.
+				오, 옆에 있는지 몰랐군. 왜냐하면 내가 자네를 무시하고 있었기 때문이지.
 			</text>
 			<choice Target="MumblingWelcome3">...</choice>
 		</node>
 		<node ID="MumblingWelcome3">
 			<text>
-				{{emote|*mumbling*}} ...waste heat from the thermo cask? Or centrifugal extraction to the p-density of sunslag...
+				{{emote|*중얼거림*}} ...열 용기에서 나온 잔열을 활용할까? 아니면 원심분리로 sunslag 임계 밀도까지 추출할까...
 			</text>
 			<choice Target="Knickknack">...</choice>
 		</node>
 		<node ID="Knickknack">
 			<text>
-				{{emote|*mumbling*}} ...unexpected deviation from the Klanq constant.
+				{{emote|*중얼거림*}} ...예상치 못한 Klanq 상수 오차로군.
 
-				{{emote|*Argyve coughs.*}}
+				{{emote|*Argyve가 기침한다.*}}
 
-				Must you bother me? What are you, some sort of waterfreak? Faundren-eyed pilgrim? Arconaut? Make =player.reflexive= useful and fetch me a knickknack from one of the caves, then. I may "reward" you.
+				꼭 그렇게 옆에서 알짱대야 하나? 넌 무슨 물친놈 같은 건가? Faundren 눈깔의 순례자? Arconaut? 그럼 동굴들에서 잡동사니 하나라도 가져와 =player.reflexive=의 쓸모를 보여주기나 하라고. 그럼 뭐 "보상"을 줄 지도.
 			</text>
-			<choice Target="Cave">Where can I find a cave?</choice>
-			<choice Target="End">I'm not interested.</choice>
+			<choice Target="Cave">동굴이 어디 있지?</choice>
+			<choice Target="End">관심 없네.</choice>
 		</node>
 		<node ID="Cave">
 			<text>
-				There are caves everywhere, you dolt! Scoop the surface of the marsh, or head on east to the rust wells, or wander into the Desert for all I care...
+				이 멍청아, 사방이 동굴이야! 습지 표면이나 좀 긁어보든가, 동쪽의 rust wells로 가든가, 아니면 사막으로 쏘다니든가 내 알바냐...
 			</text>
-			<choice Target="End" StartQuest="Fetch Argyve a Knickknack">I will return with your knickknack.</choice>
-			<choice Target="End">I'm not interested.</choice>
+			<choice Target="End" StartQuest="Fetch Argyve a Knickknack">당신에게 줄 잡동사니를 가져오지.</choice>
+			<choice Target="End">관심 없네.</choice>
 		</node>
 		<start ID="StartHasFetch1" IfHaveActiveQuest="Fetch Argyve a Knickknack">
 			<text>
-				You're standing in my light! What do you want?
+				네놈이 빛을 가리고 있잖아! 용건이 뭐지?
 			</text>
 			<choice Target="GiveKnickknack" CompleteQuestStep="Fetch Argyve a Knickknack~Return to Argyve">
-				<text>Here is your knickknack.</text>
+				<text>여기 잡동사니 가져왔어.</text>
 				<part Name="GiveArtifact" />
 			</choice>
-			<choice Target="End">Nothing. I will return with your knickknack.</choice>
+			<choice Target="End">없어. 당신에게 줄 잡동사니를 가져오지.</choice>
 		</start>
 		<start ID="GiveKnickknack" IfFinishedQuest="Fetch Argyve a Knickknack" IfNotHaveQuest="Fetch Argyve Another Knickknack">
 			<text>
-				Ah, mmm, hmmm. Are you a useful one, after all? Go fetch me another!
+				아, 으음, 흐음. 결국은 쓸모가 있는 놈인가? 그럼 하나 더 가져와!
 			</text>
-			<choice GotoID="End" StartQuest="Fetch Argyve Another Knickknack">If I must.</choice>
+			<choice GotoID="End" StartQuest="Fetch Argyve Another Knickknack">필요하다면 얼마든지.</choice>
 		</start>
 		<start ID="StartHasFetch2" IfHaveActiveQuest="Fetch Argyve Another Knickknack">
 			<text>
-				Ah, mmm, hmmm. Are you a useful one, after all? Go fetch me another!
+				아, 으음, 흐음. 결국은 쓸모가 있는 놈인가? 그럼 하나 더 가져와!
 			</text>
 			<choice Target="Impressive" CompleteQuestStep="Fetch Argyve Another Knickknack~Return to Argyve">
-				<text>Here is your knickknack.</text>
+				<text>여기 잡동사니 가져왔어.</text>
 				<part Name="GiveArtifact" />
 			</choice>
-			<choice Target="End">If I must.</choice>
+			<choice Target="End">필요하다면 얼마든지.</choice>
 		</start>		
 		<node ID="Impressive">
 			<text>
-				{{emote|*Argyve whistles.*}}
+				{{emote|*Argyve가 휘파람을 분다.*}}
 				
-				Impressive, you! Maybe you're fit to poke around my workshop and swap scrap with me. I have been wanting another apprentice. So unfortunate about Skref, what with the disembowelment and all. Take a seat, there.
+				네 녀석 인상적인데! 내 작업실을 좀 뒤적이고, 고철 좀 손볼 자격은 되는 것 같군. 마침 견습생이 하나 더 필요했거든. 스크레프 녀석은 참 안됐지… 내장이 쏟아지는 바람에 말이야. 거기 앉아.
 			</text>
 			<choice Target="Weirdwire">...</choice>
 		</node>
@@ -1756,146 +1756,146 @@
 		</start>		
 		<node ID="Weirdwire">
 			<text>
-				{{emote|*Argyve raises both eyebrows.*}}
+				{{emote|*Argyve가 두 눈썹을 치켜 뜬다.*}}
 				
-				Now, to screw the nut on the bolt with an explanation! I'm on the cusp, you see. A grand discovery. The Weirdwire Conduit is near assembled, and once it is, we'll be able to chat with anyone... in instant time! from here to the Yd Freehold. But before I can finish, I need wire. As much as you can find... at least two hundred feet. You should be able to scavenge it from the rust wells.
+				자, 그럼 내 설명대로 볼트와 너트를 조여봐! 보이는대로 지금 위대한 발명의 문턱이라고. Weiredwire Conduit가 거의 조립됐고, 완성만 되면, 이곳부터 Yd Freehold까지의 모두가... 실시간으로 대화할 수 있어! 그런데 마무리를 위해선, 가능한 많은 전선이 필요해... 최소한 200 feet는 말이야. Rust wells에서 좀 수집해올 수 있을거야. 네가 rust wells에서 수집해오면 좋겠군.
 			</text>
-			<choice GotoID="End" StartQuest="Weirdwire Conduit... Eureka!">I'll fetch you your wire.</choice>
-			<choice GotoID="End">I'm not interested.</choice>
+			<choice GotoID="End" StartQuest="Weirdwire Conduit... Eureka!">당신에게 전선을 가져오겠어.</choice>
+			<choice GotoID="End">관심없네.</choice>
 		</node>
 		<start ID="TheWire" IfHaveActiveQuest="Weirdwire Conduit... Eureka!">
 			<text>
-				The wire! Give it to me!
+				전선이군! 이리 내놔!
 			</text>
 			<choice GotoID="GiveWire" IfFinishedQuestStep="Weirdwire Conduit... Eureka!~Find 200 Feet of Wire">
-				<text>Take the wire.</text>
+				<text>전선을 가져가.</text>
 				<part Name="HaveItem" Blueprints="Wire Strand" Amount="200" Require="true" />
 			</choice>
-			<choice GotoID="End">I don't have enough yet.</choice>
+			<choice GotoID="End">아직 충분한 길이가 아니야.</choice>
 		</start>
 		<node ID="GiveWire">
 			<text>
-				{{emote|*Argyve hoots*}}
+				{{emote|*Argyve의 실소*}}
 				
-				Yes, yes! Beautiful wire! -oh, before I forget, I repaired an old recoiler for you. Use it whenever you wish to hop back to Joppa quickly. Now, give me a few moments to attach the wire...
+				그래 이거지! 아름다운 전선이야! -오, 잊기 전에, 내가 낡은 recoiler 하나를 수리해놨어. Joppa로 빠른 귀환을 하고 싶을 때 쓰는 물건이지. 이제, 내가 전선을 연결하는 동안 잠시 기다려...
 			</text>
 			<choice Target="End" CompleteQuestStep="Weirdwire Conduit... Eureka!~Return to Argyve">
-				<text>I will return.</text>
+				<text>돌아오겠소.</text>
 				<part Name="ReceiveItem" Blueprints="Joppa Recoiler" Identify="*" />
 				<part Name="TakeItem" Blueprints="Wire Strand" Amount="200" />
 			</choice>
 		</node>
 		<start ID="ConduitWorking" IfFinishedQuest="Weirdwire Conduit... Eureka!" IfNotHaveQuest="A Canticle for Barathrum">
 			<text>
-				It's working! Genius! Genius! Noise in the static- I hear it! I hear!... what's this? What *is* that? Wait...
+				동작한다! 천재야! 천재적이야! 정적 속에 소음이 들린다- 들려! 들린다고!... 뭐지? 이건 *대체* 뭐지? 잠깐...
 			</text>
 			<choice Target="Signal1">...</choice>
 		</start>
 		<node ID="Signal1">
 			<text>
-				It's repeating itself...
+				뭔가가 반복되는데...
 			</text>
 			<choice Target="Signal2">...</choice>			
 		</node>
 		<node ID="Signal2">
 			<text>
-				{{emote|*Argyve mumbles to himself for several minutes.*}}
+				{{emote|*Argyve가 한동안 혼잣말로 중얼거린다.*}}
 			</text>
 			<choice Target="Signal3">...</choice>
 		</node>
 		<node ID="Signal3">
 			<text>				
-				Apprentice! Come, here! Something strange is occurring. The Conduit is picking up a signal, some sort of repeating transmission. I cannot decipher it, however. I lack cryptogull eggs and, well, never you mind! I have a great task for you, my apprentice. Do you accept it?
+				견습생! 이리 와! 뭔가 이상한 일이 벌어지고 있어. Conduit가 어떤 반복 송신하는 신호를 수신하는것 같아. 크립토걸 알이 없어서 해독은 안되는데, 뭐, 이 말은 신경쓰지 말게! 너에게 큰 임무를 내리지, 내 견습생. 받아들이겠나?
 			</text>
-			<choice Target="Canticle1">Can I know what it is?</choice>			
+			<choice Target="Canticle1">이게 무슨 일인지 설명해 주겠어?</choice>			
 		</node>
 		<node ID="Canticle1">
 			<text>
-				-yes. You must seek out Barathrum the Old, the eldest and wisest tinker alive. He lives with his followers the Barathrumites under the arch of Grit Gate to the northeast, in the jungle-strangled ruins of Qud. He will know what to make of the signal.
+				-그래. 자네는 늙은 Barathrum, 현존하는 가장 나이 많고 가장 현명한 땜장이를 찾아가야 해. 그는 북동쪽, 정글에 파묻힌 커드의 폐허 속 Grit Gate의 아치 아래에서, 추종자들인 Barathrumites와 함께 살고 있지. 그라면 이 신호가 뭔지 알아낼 수 있어.
 			</text>
-			<choice Target="WhoBarathrumites">Who are these Barathrumites?</choice>
-			<choice Target="CanticleAccept1">I require no further information. I will go.</choice>
+			<choice Target="WhoBarathrumites">Barathrumites는 어떤 사람들이지?</choice>
+			<choice Target="CanticleAccept1">정보는 충분해. 다녀오겠어.</choice>
 		</node>
 		<node ID="WhoBarathrumites">
 			<text ID="BarathrumiteDescription">
-				Disciples of Barathrum. Mostly urshiib, like their mentor- quilled albino bears who prefer their candle-dim caves to the sun-salted surface of the jungle. A thousand years ago Barathrum and his kin crossed the Homs Delta into the rusting heart of Qud. He has spent centuries peeling the chrome shells off time's artifacts in his workshop. If he cannot decipher the signal, no one can.
+				Barathrum의 제자들이다. 대부분은 스승과 같은 urshiib 종족으로- 햇볕에 소금기 밴 정글 표면보다, 촛불처럼 어스름한 동굴을 더 좋아하는 가시 돋친 백색 곰들이지. 천 년 전, Barathrum과 그의 일족은 홈스 델타를 건너 녹슬어 가는 커드의 심장부로 들어왔어. 그는 자신의 작업실에서 시간의 유물에 씌운 크롬 껍질을 하나하나 벗기는 데 수 세기를 보냈지. 만약 그가 해독 못하는 신호라면, 아무도 할 수 없다고.
 			</text>
-			<choice Target="CanticleAccept1" IfNotHaveQuest="A Canticle for Barathrum">I accept the task, Argyve.</choice>
-			<choice Target="End" IfNotHaveQuest="A Canticle for Barathrum">I must think on this.</choice>
-			<choice Target="End" IfHaveQuest="A Canticle for Barathrum">Farewell, Argyve.</choice>
+			<choice Target="CanticleAccept1" IfNotHaveQuest="A Canticle for Barathrum">일을 수락하지, Argyve.</choice>
+			<choice Target="End" IfNotHaveQuest="A Canticle for Barathrum">생각 좀 해봐야겠어.</choice>
+			<choice Target="End" IfHaveQuest="A Canticle for Barathrum">안녕히, Argyve.</choice>
 		</node>
 		<node ID="CanticleAccept1">
 			<text>
-				Splendid! Perfect! Let me record the signal to disk, which you'll need to guard with your life, I'm afraid.
+				훌륭해! 완벽해! 자, 나 역시 불안하지만, 네 목숨 바쳐 지켜야 할 신호를 디스크에 기록하지.
 
-				I'll rig up a droid scrambler for you, too. You see, the Barathrumites have programmed a troupe of waydroids to guard the approach to Grit Gate. With the scrambler, you'll needn't worry about them. Wait there.
+				그리고 droid scrambler도 하나 달아 줄께. Barathrumites가 Grit Gate로 가는 길목을 지키라고 waydroids 무리를 프로그래밍해 두었거든. 이 교란기가 있으면, 놈들 걱정은 안해도 돼. 거기서 기다려.
 			</text>
 			<choice Target="CanticleAccept2">...</choice>
 		</node>
 		<node ID="CanticleAccept2">
 			<text>
-				{{emote|*Argyve mumbles to himself for several minutes.*}}
+				{{emote|*Argyve가 한동안 혼잣말로 중얼거린다.*}}
 			</text>
 			<choice Target="CanticleAccept3">...</choice>
 		</node>
 		<node ID="CanticleAccept3">
 			<text>			
-				Here you are. Now, go! Off with you! May you live long enough to do my bidding. Away, away!
+				여기 있어. 자, 출발! 어서 꺼져! 내 심부름을 끝내기 전까진 살아있길 빌지. 가라, 가!
 			</text>
 			<choice GotoID="End" StartQuest="A Canticle for Barathrum">
-				<text>Farewell, Argyve.</text>
+				<text>안녕히, Argyve.</text>
 				<part Name="ReceiveItem" Blueprints="Droid Scrambler,Argyve's Data Disk" Identify="All" />
 			</choice>
 		</node>   
 
     <start ID="StartFinishedCanticle" IfFinishedQuest="A Canticle for Barathrum">
       <text>
-      {{emote|*Argyve gives a curt nod and extended cock of an eyebrow.*}}
+      {{emote|*Argyve가 짧게 고개를 끄덕인 뒤, 의미심장하게 눈썹을 치켜든다.*}}
 
       Apprentice.
 
-      {{emote|*Argyve returns to his tasks.*}}
+      {{emote|*Argyve가 일을 끝내고 돌아온다.*}}
       </text>
-			<choice Target="Golgotha" IfHaveActiveQuest="More Than a Willing Spirit">The Barathrumites say I must plumb a cave called Golgotha before joining them.</choice>
-			<choice Target="RankUp" IfFinishedQuest="Decoding the Signal">Argyve, I am no apprentice. The Barathrumites call me =factionaddress:Barathrumites= now.</choice>
-			<choice Target="AskAfter" IfFinishedQuest="More Than a Willing Spirit">Need anything, Argyve?</choice>
-			<choice Target="End">Farewell, Argyve.</choice>
+			<choice Target="Golgotha" IfHaveActiveQuest="More Than a Willing Spirit">Barathrumites가 말하길 내가 그들에게 합류하려면 Golgotha라는 동굴을 먼저 철저히 파헤쳐야 한다던데.</choice>
+			<choice Target="RankUp" IfFinishedQuest="Decoding the Signal">Argyve, 난 이제 견습생이 아닐세. Barathrumites가 이제 나를 =factionaddress:Barathrumites=(이)라고 부른다고.</choice>
+			<choice Target="AskAfter" IfFinishedQuest="More Than a Willing Spirit">더 필요한건, Argyve?</choice>
+			<choice Target="End">안녕히, Argyve.</choice>
     </start>
 
 		<start ID="StartCanticleActive" IfHaveQuest="A Canticle for Barathrum">
 			<text>
-				My apprentice! What?
+				내 견습생! 뭐라고?
 			</text>
-			<choice Target="WhoBarathrumites">Who are the Barathrumites again?</choice>
-			<choice Target="End">Live and drink.</choice>
+			<choice Target="WhoBarathrumites">Barathrumites가 어떤 사람들이라고 했었지??</choice>
+			<choice Target="End">살고 마시게.</choice>
 		</start>
 				
     <node ID="Golgotha" Inherits="StartFinishedCanticle">
       <text>
-				Do they? Yes, yes, Otho might. Hmm.
+				그들이? 응, 맞아. Otho라면 그랬겠지. 흐음.
 
-        {{emote|*Argyve pauses for an uncomfortably long time.*}}
+        {{emote|*Argyve가 불편할 만큼 오랫동안 고심한다.*}}
 
-        Well.
+        그래.
       
-        {{emote|*Another pause, this one even more long and uncomfortable than the last*}}
+        {{emote|*Another가 불편한 고심이, 방금보다 더욱 오랫동안 지속된다.*}}
 
-        Good luck!
+        행운을 비네!
       </text>
     </node>
     <node ID="RankUp" Inherits="StartFinishedCanticle">
       <text>
-      Did they, now? Well you're not MY =factionaddress:Barathrumites=!
+      그래, 그랬다 이거지? 하지만 넌 나의 =factionaddress:Barathrumites=(은)는 아니라고!
 
-      Grit Gate is not Joppa, you pridesome solder-nail, and in this house you are apprentice still.
+      Grit Gate는 Joppa가 아니다, 이 자만심에 찌든 납땜못 같은놈, 그리고 이 집에선 넌 아직 견습생이다.
 
-      Now, what did you want? Be quick!
+      자, 그래서 용건이 뭐지? 빨리 말해!
       </text>
     </node>
     <node ID="AskAfter" Inherits="StartFinishedCanticle">
-      <text>-what?
+      <text>-뭣?
 
-      No, no, I'm far too engrossed to see to your curiosity. I'm sure the Barathrumites have something for you to do.
+      아니, 아니. 난 지금 너무 집중해야 해서 네 호기심에 낭비할 시간이 없어. Barathrumites에게 가면 니가 할 일이 뭔가 있겠지.
       </text>
     </node>
 	</conversation>
