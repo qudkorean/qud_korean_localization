@@ -12368,17 +12368,17 @@
 	<conversation ID="BaseConversation">
 		<!-- Quest signposting -->
 		<choice ID="AskForWork" Target="DirectToWork" IfQuestSignpost="Checkpoint" Ordinal="10000">
-			<text>I'm looking for work.</text>
-			<text>Do you have work that needs doing?</text>
-			<text>My services are available if you have work to offer.</text>
-			<text>Is there work around here?</text>
+			<text>난 일을 찾는 중이네.</text>
+			<text>일손이 좀 필요한가?</text>
+			<text>당신들이 원한다면 내가 일을 좀 해줄수 있는데.</text>
+			<text>여기 뭔가 할일 좀 있나?</text>
 		</choice>
 		<node ID="DirectToWork">
-			<text>Speak to =questgivers=.</text>
-			<text>Talk to =questgivers=.</text>
-			<text>Find =questgivers=.</text>
-			<choice ID="MoreToAsk" Target="Start">Thank you. I have more to ask.</choice>
-			<choice ID="Goodbye" Target="End">Live and drink.</choice>
+			<text>=questgivers=에게 말해보게.</text>
+			<text>=questgivers=(과)와 대화해보게.</text>
+			<text>=questgivers=(을)를 찾아가보게.</text>
+			<choice ID="MoreToAsk" Target="Start">고맙네. 묻고 싶은 게 더 있어.</choice>
+			<choice ID="Goodbye" Target="End">살고 마시게.</choice>
 			<part Name="QuestSignpost" />
 		</node>
 	</conversation>
