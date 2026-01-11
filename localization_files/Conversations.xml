@@ -442,11 +442,11 @@
 		</start>
 		<node ID="Joppa" Inherits="Start">
 			<text>
-				-이곳 말인가? 오아시스 촌락이지. 세계의 선반 아래에 자리한 곳이네. 소금의 수백만 숨결을 실은 바람이 대소금사막 Moghra'yi를 넘어 불어오지. 동쪽에는 Qud의 썩어가는 정글이 있고.
+				-이곳 말인가? 오아시스 촌락이지. 세계의 선반 아래에 자리한 곳이네. 소금의 수백만 숨결을 실은 바람이 대소금사막 모그라'이를 넘어 불어오지. 동쪽에는 커드의 썩어가는 정글이 있고.
 
 				그 틈에서 watervine이 자랄 수 있기에, 우리가 기르고 잇지. 으음, =player.formalAddressTerm=(이)여.
 			</text>
-			<choice Target="Qud" Priority="1">Qud에 대해 말해줄 수 있나?</choice>
+			<choice Target="Qud" Priority="1">커드에 대해 말해줄 수 있나?</choice>
 		</node>
 		<node ID="Qud" Inherits="Start">
 			<text>
@@ -637,7 +637,7 @@
 			<text>
 				음? 그럼, 있지.
 				
-				뭔가가 Beetle Moon 때 쯤 watervine을 먹고있어. Q-ruun이 말하길 거미같은 생물이 소금물에서 기어다니고 있었다더군. 하지만 cave spider가 감히 Warden의 영역 근처로 오는건 말이 안 되네.
+				뭔가가 Beetle Moon 때 쯤 watervine을 먹고있어. Q-ruun이 말하길 거미같은 생물이 소금물에서 기어다니고 있었다더군. 하지만 cave spider가 감히 워든의 영역 근처로 오는건 말이 안 되네.
 				
 				난 물에 떠있는 작은 빨간색 반점의 맛을 봤네. 그건 Red Rock의 흙인 Shale 이었어.
 			</text>
@@ -698,7 +698,7 @@
       <text>
 				그래, Joppa가 내 집이지.
 
-				과거엔 나의 형제들과 saltback이 속한 상단에서 Moghra'yi를 떠도는 삶이었지만, 장로 Irudad를 만난 순간 이곳이 내가 정착할 곳임을 직감했네. 만약 장로와 이야기 해본다면 당신도 이해할거야, =player.formalAddressTerm= =player.apparentSpecies=(이)여.
+				과거엔 나의 형제들과 saltback이 속한 상단에서 모그라'이를 떠도는 삶이었지만, 장로 Irudad를 만난 순간 이곳이 내가 정착할 곳임을 직감했네. 만약 장로와 이야기 해본다면 당신도 이해할거야, =player.formalAddressTerm= =player.apparentSpecies=(이)여.
 			</text>      
     </node>
     <node ID="AboutTheDromad">
