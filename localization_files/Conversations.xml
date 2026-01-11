@@ -410,154 +410,154 @@
 	<conversation ID="Irudad" Inherits="BaseSlynthMayor">
 		<node ID="Start" IfFinishedQuest="What's Eating the Watervine?" Inherits="Welcome">
 			<text>
-				-mm. Mmm? =player.FormalAddressTerm=.~
-				{{emote|*Elder Irudad smiles.*}}~
-				{{emote|*Elder Irudad smiles.*}}
+				-음. 음? =player.FormalAddressTerm=.~
+				{{emote|*Elder Irudad가 미소짓는다.*}}~
+				{{emote|*Elder Irudad가 미소짓는다.*}}
 
-				Come in- come sit 'neath the cool shade, 'cross a pillow there.~
-				{{emote|*Elder Irudad smiles.*}}
+				들어와서 그늘 밑 방석에 좀 앉게나.~
+				{{emote|*Elder Irudad가 미소짓는다.*}}
 
-				Live and drink, =name=. Come, sit with me.
+				살고 마시게, =name=. 이리 와서 내 옆에 앉게나.
 			</text>
 		</node>
 		<start ID="Welcome">
 			<text>
-				-mm. Mmm? =player.FormalAddressTerm=?
+				-음. 으음? =player.FormalAddressTerm=?
 
-				{{emote|*Elder Irudad smiles.*}}
+				{{emote|*Elder Irudad가 미소짓는다.*}}
 
-				Live and drink. Come in- come sit 'neath the cool shade, 'cross a pillow there. And welcome to Joppa.
+				살고 마시게. 들어 와서 그늘 밑 방석에 좀 앉게나. Joppa에 온걸 환영하네.
 
-				You may drink of our freshwater, too, and quench your thirst.
+				맑은 물도 맘껏 마시면서 갈증도 해소하게나.
 			</text>
-			<choice Target="FinishedRedrock" IfHaveActiveQuest="What's Eating the Watervine?" IfFinishedQuestStep="What's Eating the Watervine?~Travel to Red Rock" IfHaveItemDescendsFrom="Girshling Corpse">I'm back from Red Rock with the corpse of a pale spiderling. Elder, would you examine it?</choice>
-			<choice Target="Joppa">What is this place, Joppa?</choice>
-			<choice Target="Wares">Do you sell wares here?</choice>
-			<choice Target="Work" IfNotHaveQuest="What's Eating the Watervine?">I'm looking for work.</choice>
-			<choice Target="WorkAfter" IfHaveQuest="What's Eating the Watervine?">I'm looking for work.</choice>
-			<choice Target="GyreReminder" IfFinishedQuest="What's Eating the Watervine?">Can you tell me about the Gyre and the Girsh nephilim again?</choice>
-      <choice Target="Stiltbound" IfHaveQuest="O Glorious Shekhinah!">What can you tell me about the Six Day Stilt?</choice>
-      <choice Target="Barathrumites" IfHaveQuest="A Canticle for Barathrum">Argyve wants me to meet the Barathrumites.</choice>
+			<choice Target="FinishedRedrock" IfHaveActiveQuest="What's Eating the Watervine?" IfFinishedQuestStep="What's Eating the Watervine?~Travel to Red Rock" IfHaveItemDescendsFrom="Girshling Corpse">Red Rock에서 창백한 새끼거미의 시체를 가져왔소. 장로여, 이게 뭔지 알아보겠나?</choice>
+			<choice Target="Joppa">이 Joppa는 어떤 곳인가?</choice>
+			<choice Target="Wares">여기서 뭘 좀 살수 있나?</choice>
+			<choice Target="Work" IfNotHaveQuest="What's Eating the Watervine?">난 일을 찾는 중이네.</choice>
+			<choice Target="WorkAfter" IfHaveQuest="What's Eating the Watervine?">난 일을 찾는 중이네.</choice>
+			<choice Target="GyreReminder" IfFinishedQuest="What's Eating the Watervine?">Gyre와 Girsh 네피림에 대해 다시 말해줄 수 있나?</choice>
+      <choice Target="Stiltbound" IfHaveQuest="O Glorious Shekhinah!">Six Day Stilt에 대해 알고 있는게 있나?</choice>
+      <choice Target="Barathrumites" IfHaveQuest="A Canticle for Barathrum">Argyve가 나보고 Barathrumites를 만나보라더군.</choice>
 			<choice GotoID="End">Live and drink.</choice>
 		</start>
 		<node ID="Joppa" Inherits="Start">
 			<text>
-				-this? The oasis-hamlet. 'Neath the shelf of the world. A million breaths of salt the wind heaves over the Great Salt Desert Moghra'yi. And to the east, the rotting jungles of Qud.
+				-이곳 말인가? 오아시스 촌락이지. 세계의 선반 아래에 자리한 곳이네. 소금의 수백만 숨결을 실은 바람이 대소금사막 Moghra'yi를 넘어 불어오지. 동쪽에는 Qud의 썩어가는 정글이 있고.
 
-				Here in the crack between the two, watervine can grow, and we grow it. mmm, =player.formalAddressTerm=.
+				그 틈에서 watervine이 자랄 수 있기에, 우리가 기르고 잇지. 으음, =player.formalAddressTerm=(이)여.
 			</text>
-			<choice Target="Qud" Priority="1">Can you tell me about Qud?</choice>
+			<choice Target="Qud" Priority="1">Qud에 대해 말해줄 수 있나?</choice>
 		</node>
 		<node ID="Qud" Inherits="Start">
 			<text>
-				-mm, there? Land slopes up and is toothed in chrome steeples, ageless things. Looming over the old-earth tunnels, pillowed in rotting jungle and fungus groves. And broken against the mounts of the north, they are, in the shadow of the Spindle...
+				-음, 그곳? 땅이 치솟아 오르고, 시간을 초월한 크롬의 첨탑들이 이빨처럼 솟아 있지. 고대의 땅속 통로 위로 우뚝 서서, 썩어가는 밀림과 곰팡이 숲에 파묻혀 있고. 북쪽의 산맥에 부딪혀 부서진 채, 스핀들의 그늘 아래에 있네…
 
-				There are people, friends, communities. And friends-to-noone, too. History is thick as the high salt sun, =player.formalAddressTerm=, and where the past is ground up like matz meal, a mix of life sets in.
+				그곳엔 사람들, 친구, 공동체, 그리고 누구의 친구도 아닌 자들도 있어. 역사는 짙어, 높은 소금 태양처럼, =player.formalAddressTerm=, 그리고 과거가 마츠 가루처럼 갈려버린 자리엔, 온갖 삶이 뒤섞여 뿌리내리지.
 
-				-mm, adventurous ones set off for their own splinter of artifact. To both Fates, life and death...
+				-음, 모험을 택한 자들은 각자의 유물 파편을 찾아 길을 떠나지. 삶과 죽음의 두 운명 모두를 향해서...
 			</text>
 		</node>
 		<node ID="Wares" Inherits="Start">
 			<text>
-				-here? Speak to my daughter through the east door, for herbs. And sitting Tam in the southeast has all manner of trinket, against his chests o' drawers.
+				-이곳? 동쪽 문을 통해 나가면 내 딸에게서 허브를 살수 있어. 남동쪽에 있는 Tam은 온갖 종류의 잡동사니를 서랍장 앞에 쌓아 놓고 있지.
 			</text>
 		</node>
 		<node ID="Work" Inherits="Start">
 			<text>
-				-mm, work? The farmers are plagued by cave vermin. You might speak to Mehmet o' there, by the southern watervine patch.
+				-음, 일거리? 농부들이 동굴 해충 때문에 골치를 썩고 있네. 남쪽 watervine 밭 근처에 있는 Mehmet에게 가서 얘기해 보게나.
 
-				And Argyve, too, =player.formalAddressTerm=. The tinker. Always looking for trinkets to wire between, heh. Go through his hut of sheet metal, to the southwest.
+				그리고 Argyve도 있지, =player.formalAddressTerm=. 땜장이 말이야. 언제나 물건끼리 연결하는데 쓰일 잡동사니를 찾고 있거든, 허허. 남서쪽에 있는 판금 오두막으로 가게.
 			</text>
 		</node>
 		<node ID="WorkAfter" Inherits="Start">
 			<text>
-				-mm, work? Try Argyve, =player.formalAddressTerm=. The tinker. Always looking for trinkets to wire between, heh. Go through his hut of sheet metal, to the southwest.
+				-음, 일거리? Argyve에게 이야기 해 보게, =player.formalAddressTerm=. 그는 땜장이일세. 언제나 물건끼리 연결하는데 쓰일 잡동사니를 찾고 있거든, 허허. 남서쪽에 있는 판금 오두막으로 가게.
 			</text>
 		</node>
     <node ID="Stiltbound" Inherits="Start">
-      <text>-ahh, mm, such spectacle. The statues within, a revelation to the eyes. Chandlers enough to drain your skins dry 'twixt Shallows and Beetle Moon.</text>
+      <text>-아… 음, 참 장관이지. 안에 있는 조각상들은 눈이 뜨이는 계시같아. Shallow 부터 Beetle Moon 사이에 물주머니가 말라버릴 정도로 많은 상인도 있네.</text>
     </node>
     <node ID="Barathrumites" Inherits="Start">
-      <text>-mm, Barathrumites. Strange draft o'those bearfolk. They, mm, hah. They care not overly for outsiders. I hope Argyve sold you not a better welcome than you'll have.</text>
+      <text>-음, Barathrumites. 곰족은 참 별난 무리지. 그들은 말일세, 음, 하하. 외지인한테 그다지 호의적이진 않아. 적어도 Argyve가 자네를 맞이한 태도보다는 낫길 바랄 뿐이네.</text>
     </node>
 		<node ID="FinishedRedrock">
 			<text>
-				-this? Oh? Oh...
+				-이건? 오? 오...
 
-				{{emote|*Elder Irudad pauses for several minutes.*}}
+				{{emote|*Elder Irudad가 한동안 말 없이 생각에 잠긴다.*}}
 
-				Warted leg? mm. Foul smell of sour gum? mmm. Moon and sun....
+				사마귀 난 다리에? 음. 시큼한 냄새까지? 으음. 달과 태양이여....
 
-				A girshling? This is a girshling.
+				Girshling? 이건 girshling이네.
 			</text>
-			<choice Target="Girshling">What's a girshling?</choice>
+			<choice Target="Girshling">Girshling이 무엇이지?</choice>
 		</node>
 		<node ID="Girshling">
 			<text>
-				Creature of plague, =player.formalAddressTerm=. mmm. This one...
+				재앙의 생물이지, =player.formalAddressTerm=. 으음. 이건...
 
-				{{emote|*Elder Irudad pauses.*}}
+				{{emote|*Elder Irudad가 뜸을 들인다.*}}
 
-				This one covered in slick and muscled out the bilge hose of sleeping Agolgot, in the cave under the Cloaca...
+				이건 점액에 덮인 채, Cloaca 동굴 아래에서 잠든 Agolgot의 폐수관을 비집고 나온 놈이네…
 
-				-mm, but here? Girshling this far west? There must be hundreds for one to reach... mm, does the Gyre widen again??
+				-음, 하지만 여기에 어떻게? Girshling이 이렇게 먼 서쪽까지? 한마리가 이곳에 오기까지 수백마리는 있었을걸세... 음, Gyre가 다시 퍼지는건가?
 			</text>
 			<choice Target="Gyre">Gyre?</choice>
-			<choice Target="GyreWight" IfHaveState="RedrockGyreWightTalked">I talked to a strange figure next to the girshling.</choice>
-			<choice Target="GyreWight" IfHaveState="RedrockGyreWightSeen" IfNotHaveState="RedrockGyreWightTalked">There was a strange figure shadowing the creature...</choice>
-			<choice Target="Defanged">I noticed the creature has had its fangs removed.</choice>
+			<choice Target="GyreWight" IfHaveState="RedrockGyreWightTalked">Girshling 옆에 있던 낯선 존재에게 말을 걸엇네.</choice>
+			<choice Target="GyreWight" IfHaveState="RedrockGyreWightSeen" IfNotHaveState="RedrockGyreWightTalked">그 생물을 쫓아다니는 낯선 존재가 있었어...</choice>
+			<choice Target="Defanged">송곳니가 빠진 생물이 있던걸 봤네.</choice>
 		</node>
 		<node ID="Gyre">
 			<text>
-				{{emote|*Elder Irudad pauses.*}}
+				{{emote|*Elder Irudad가 뜸을 들인다.*}}
 
-				-mm, plagues. Of our great grandsires many-times-over. Salt, darkness, svardym-frog... Girshling.
+				-음, 재앙일세. 고조부를 몇 번씩 거슬러 올라갈 정도로 오래되었어. 소금과 어둠, svardym-개구리... 그리고 Girshling.
 			</text>
 			<choice Target="Agolgot2">...</choice>
 		</node>
 		<node ID="Agolgot2">
 			<text>
-				{{emote|*Elder Irudad pauses.*}}
+				{{emote|*Elder Irudad가 뜸을 들인다.*}}
 
-				-mm, =player.formalAddressTerm=. Do not like to sour the air with a harsh word! But this tiding bites my liver like acid. mm, must ask Nima for an elixir of yuckwheat...
+				-음, =player.formalAddressTerm=. 험한 말로 분위기를 망치고 싶진 않네! 하지만 이 소식은 내 간이 산으로 타들어가는 느낌이군. 음, Nima에게 yuckwheat 물약을 부탁해야겠어...
 			</text>
-			<choice Target="GyreWight" IfHaveState="RedrockGyreWightTalked">I talked to a strange figure next to the girshling.</choice>
-			<choice Target="GyreWight" IfHaveState="RedrockGyreWightSeen" IfNotHaveState="RedrockGyreWightTalked">There was a strange figure shadowing the creature...</choice>
-			<choice Target="Defanged">I noticed the creature has had its fangs removed.</choice>
-			<choice Target="Apology">I am sorry to cause pain, Elder.</choice>
+			<choice Target="GyreWight" IfHaveState="RedrockGyreWightTalked">Girshling 옆에 있던 낯선 존재에게 말을 걸엇네.</choice>
+			<choice Target="GyreWight" IfHaveState="RedrockGyreWightSeen" IfNotHaveState="RedrockGyreWightTalked">그 생물을 쫓아다니는 낯선 존재가 있었어...</choice>
+			<choice Target="Defanged">송곳니가 빠진 생물이 있던걸 봤네.</choice>
+			<choice Target="Apology">장로여, 기분 나쁜 이야기를 꺼내서 미안하군.</choice>
 		</node>
 		<node ID="GyreWight">
-			<text>-mm, oh? In dyed robes, flashing gestures of hand? And ranting about pipe milk? A gyre wight, must be. They about worship the Girsh nephilim as gods.</text>
+			<text>-음… 염색된 옷과 요란한 손짓? 거기에 관유에 대해 떠들고? 그럼 분명 gyre wight일 걸세. Girsh 네피림을 신처럼 떠받드는 자들이지.</text>
 			<choice Target="Nephilim">Girsh nephilim?</choice>
 		</node>
 		<node ID="Nephilim" Inherits="Agolgot2">
 			<text>
-				{{emote|*Elder Irudad pauses.*}}
+				{{emote|*Elder Irudad가 뜸을 들인다.*}}
 
-				-mm, nephilim. Seventh plague. Girsh titans born on the Moon Stair, and quickened to life to eat our young. Sultan Resheph drove them back a chiliad ago, away to slumber. mm, do they rouse?
+				-음, 네피림. 일곱번째 재앙. 문 스테어에서 태어난 Girsh의 거인들로, 생명을 부여받아 우리의 아이들을 먹어치우던 존재들. 술탄 Resheph가 천 년 전에 그들을 몰아내 잠들게 했지. 음… 다시 깨어나는 건가?
 			</text>
 		</node>
 		<node ID="Defanged">
-			<text>-mm, oh? A gyre wight, must be. They bind the teeth right up to their own gums, to make a show for the Girsh nephilim.</text>
+			<text>-음, 오? 분명 gyre wight겠군. 그들은 Girsh 네피림을 숭배하는 행위로 스스로의 이빨을 잇몸채로 바짝 묶어버리지.</text>
 			<choice Target="Nephilim">Girsh nephilim?</choice>
 		</node>
 		<node ID="Apology">
 			<text>
-				-mm? No, =player.formalAddressTerm=! Your finding is rich in value to us. We are poor farmers, and sharpen our vinereapers is all we can do. But others? Perhaps more.
+				-음? 아닐세, =player.formalAddressTerm=! 그대가 발견한건 우리에게 엄청난 가치가 있네. 우리는 가난한 농부들이고, 낫을 갈아두는것 말곤 할 수 있는게 없어. 그렇지만 다른 이들이라면? 더 많은 것을 할 수 있을걸세.
 
-				Take these prickly-boons as thanks. mm, I will not soon forget this, =name=. Leave me now to muse, kindly...
+				이 바늘달린 물건들은 감사의 표시일세. 음, 이 일은 쉽게 잊히지 않을거야, =name=. 이제 사색에 잠기게, 자리를 비켜주면 고맙겠네…
 			</text>
 			<choice Target="End">
-				<text>Live and drink.</text>
+				<text>살고 마시게.</text>
 				<part Name="QuestHandler" QuestID="What's Eating the Watervine?" Action="Complete" />
 				<part Name="ReceiveItem" Blueprints="UbernostrumTonic,Fixit Spray,SalveTonic,SalveTonic,SalveTonic" Identify="UbernostrumTonic,SalveTonic" />
 			</choice>
 		</node>
 		<node ID="GyreReminder" Inherits="Start">
 			<text>
-				-mm, yes? Plagues, a chiliad old. Seven such: girshlings, darkness. mm, svardym-frog...
+				-음, 그렇지? 천년 전부터 있던 재앙들이야. 일곱 재앙은 girshling, 어둠, svardym-개구리....
 
-				Ah, nephilim, too, =player.formalAddressTerm=. Girsh titans who eat the young of kith and kin. Sultan Resheph drove them under the earth, but do they stir??
+				아, 네피림도, =player.formalAddressTerm=. 혈족과 동족들의 아이들을 잡아먹던 Girsh 거인들. 술탄 Resheph가 그들을 지하로 몰아냈지만, 다시 깨어나는 것인가?
 			</text>
 		</node>
 
@@ -593,77 +593,77 @@
 
 		<start ID="RedrockNews" IfHaveActiveQuest="What's Eating the Watervine?" Inherits="Welcome">
 			<text>
-				Live and drink, =name=. Any news from Red Rock?
+				살고 마시게, =name=. Red Rock 건은 새 소식 좀 있나?
 			</text>
-			<choice Priority="1" Target="BackFromRedrock" IfHaveActiveQuest="What's Eating the Watervine?" IfFinishedQuestStep="What's Eating the Watervine?~Travel to Red Rock" IfHaveItemDescendsFrom="Girshling Corpse">Yes. I found the vermin and bits of gnawed watervine. I carry one's corpse with me.</choice>
-			<choice Priority="1" Target="Aye" IfHaveActiveQuest="What's Eating the Watervine?">None yet.</choice>
+			<choice Priority="1" Target="BackFromRedrock" IfHaveActiveQuest="What's Eating the Watervine?" IfFinishedQuestStep="What's Eating the Watervine?~Travel to Red Rock" IfHaveItemDescendsFrom="Girshling Corpse">그래. 해충과 갉아먹힌 Watervine을 조금 발견했지. 그 녀석의 시체를 가져왔네.</choice>
+			<choice Priority="1" Target="Aye" IfHaveActiveQuest="What's Eating the Watervine?">아직.</choice>
 			<choice ID="MehmetIntroduce" Load="Remove" />
 		</start>
 		<start ID="Welcome">
 			<text IfFinishedQuest="What's Eating the Watervine?">
-				Live and drink, =name=.~
-				Taste what on the wind today, =name=?~
-				Moon and sun, =name=.~
-				I can taste lime, =name=. And mayhaps gallium?~
-				Aye, the pest-vanquisher! Live and drink, =name=.
+				살고 마시게, =name=.~
+				바람의 맛이 느껴지나, =name=?~
+				달과 태양이여, =name=.~
+				라임 맛이 나는군, =name=. 갈륨 맛도 약간?~
+				어이, 해충 정복자! 살고 마시게, =name=.
 			</text>
 			<text IfNotHaveQuest="What's Eating the Watervine?">
-				아. 물꾼이로군? 여행자여, 살고 마시게.
+				어이. 물꾼이로군? 여행자여, 살고 마시게.
 			</text>			 
-			<choice ID="MehmetIntroduce" Target="Name" IfNotFinishedQuest="What's Eating the Watervine?" IfNotHaveState="ToldMehmetName" SetBooleanState="ToldMehmetName,true">난 =name=라고 하네.</choice>
-			<choice Target="Village">당신이 사는 마을 조파에 대해 설명해줄 수 있나?</choice>
+			<choice ID="MehmetIntroduce" Target="Name" IfNotFinishedQuest="What's Eating the Watervine?" IfNotHaveState="ToldMehmetName" SetBooleanState="ToldMehmetName,true">난 =name=(이)라고 하네.</choice>
+			<choice Target="Village">당신이 사는 마을 Joppa에 대해 설명해줄 수 있나?</choice>
 			<choice Target="Work" IfNotHaveQuest="What's Eating the Watervine?">난 일을 찾는 중이네.</choice>
 			<choice Target="End">살고 마시게.</choice>
 		</start>						
 		<node ID="Name" Inherits="Welcome">
 			<text Load="Replace" Priority="1">
-				Mehmet, the tongue says. Live and drink, =name=.
+				Mehmet, 그게 내가 불리는 이름이지. 살고 마시게, =name=.
 			</text>			
 		</node>
 		<node ID="Village">
 			<text>
-				Watervine farm in the lap of the marsh. You've sucked the moisture out a vinewafer, yea? We tend the plant here.
+				늪에 둘러쌓인 Watervine 농장이지. 당신도 vinewafer에서 수분을 빨아먹어 봤을텐데? 여기서 기르고 있네.
 			</text>
 			<choice Target="VillageMore">...</choice>			
 		</node>
 		<node ID="VillageMore" Inherits="Welcome">
 			<text>
-				Wind off the Great Desert cools a touch and gives up moisture. Just enough. A tongue can taste a hundred kinds of wind, y'know?
+				대사막에서 불어오는 바람이 이곳에서 식으며 약간이지만, 충분한 수분이 생기네. 그쪽도 바람에서 느껴지는 다양한 맛을 느껴봤겠지?
 
-				Anywhile, that's where my wandering mind goes. More's about Joppa I say speak to our Elderfriend. Irudad. Up northwise the path.
+				아무튼, 내 정신이 딴길로 샜구만. Joppa에 대해 더 많은걸 알고 싶다면 Iurdad 장로님에게 말해보게. 길 따라 북쪽이야.
 			</text>			
 		</node>
 		<node ID="Work">
 			<text>
-				Aye? I have it, then.
+				음? 그럼, 있지.
 				
-				Somethin' is eating our watervine, 'round Beetle Moon. Q-ruun says he saw a creature, spider-like, slinking in the brine. But no cave spider would dare get so near Warden's stomps.
+				뭔가가 Beetle Moon 때 쯤 watervine을 먹고있어. Q-ruun이 말하길 거미같은 생물이 소금물에서 기어다니고 있었다더군. 하지만 cave spider가 감히 Warden의 영역 근처로 오는건 말이 안 되네.
 				
-				I tasted a bit of red fleck in the pool. Shale, like we find in the soil by Red Rock...
+				난 물에 떠있는 작은 빨간색 반점의 맛을 봤네. 그건 Red Rock의 흙인 Shale 이었어.
 			</text>
 			<choice Target="WorkMore">...</choice>
 		</node>
 		<node ID="WorkMore">
 			<text>
-				Hike there, will you? To Red Rock. Just about two parasangs north of Joppa.
+        당신이 그곳으로 여정을 떠나주겠나? Red Rock은 Joppa에서 2 parasang 쯤 북쪽이네.
 				
-				Kill the vermin and bring one's corpse back, for seein' what it is. Elder will take care to pay you after, waterhand.
+				해충의 정체를 확인할 수 있도록 죽이고 시체를 가져와주게나. 장로가 보상해 줄 것이네, 물꾼이여.
 			</text>
-			<choice Target="End" StartQuest="What's Eating the Watervine?">I will do as you ask.</choice>
-			<choice Target="Start">I'm not interested.</choice>
+			<choice Target="End" StartQuest="What's Eating the Watervine?">당신의 의뢰를 따르지.</choice>
+			<choice Target="Start">관심없네.</choice>
 		</node>
 		<node ID="Aye" Inherits="Welcome">
 			<text>
-				Aye.
+				어이.
 			</text>
 		</node>
 		<node ID="BackFromRedrock">
 			<text>
-				Oh? Oh. {{emote|*Mehmet pauses.*}}
+				오? 오. {{emote|*Mehmet이 뜸을 들인다.*}}
 
-				Don't like the look o' that thing. Best bring it to Elder. Hut's northwise up the path.
+				생긴게 불길하구만. 장로에게 가져가는게 좋겠어. 오두막은 길 따라 북쪽이야.
 			</text>
-			<choice GotoID="End">As you say.</choice>
+			<choice GotoID="End">그렇게 하지.</choice>
 		</node>
 					
 	</conversation>
@@ -674,7 +674,7 @@
       <text>
         =generic=
       </text>
-      <choice GotoID="End">Live and drink.</choice>
+      <choice GotoID="End">살고 마시게.</choice>
     </node>
   </conversation>
 
@@ -682,35 +682,35 @@
   <conversation ID="Tam">
     <start ID="Welcome">
       <text>
-        =player.apparentSpecies=? We are greeted! What do you desire?
+        =player.apparentSpecies=? 환영하네! 원하는게 뭔가?
       </text>     
-      <choice Target="WhoIsTam">I am =name=. Who are you?</choice>
-      <choice Target="Joppa">Do you live here?</choice>
-      <choice Target="AboutTheDromad">What kind of creature are you?</choice>
-      <choice Target="End">I desire nothing. Live and drink.</choice>
+      <choice Target="WhoIsTam">나는 =name=. 당신은 누구지?</choice>
+      <choice Target="Joppa">당신은 여기 사나?</choice>
+      <choice Target="AboutTheDromad">당신은 어떤 종족이지?</choice>
+      <choice Target="End">원하는건 없어. 살고 마시게.</choice>
     </start>
     <node ID="WhoIsTam" Inherits="Welcome">
       <text>
-				It is a pleasure to know this, =player.apparentSpecies= =player.formalAddressTerm= =name=! I am Tam.
+				알려줘서 고맙네, =player.apparentSpecies= =player.formalAddressTerm= =name=! 나는 Tam이야.
 			</text>      
     </node>
     <node ID="Joppa" Inherits="Welcome">
       <text>
-				Joppa is my home, yes.
+				그래, Joppa가 내 집이지.
 
-				I walked Moghra'yi in the caravans of my brethren and the saltback, but upon meeting Elder Irudad, knew at once to settle down here. You will understand, =player.formalAddressTerm= =player.apparentSpecies=, if you speak to him.
+				과거엔 나의 형제들과 saltback이 속한 상단에서 Moghra'yi를 떠도는 삶이었지만, 장로 Irudad를 만난 순간 이곳이 내가 정착할 곳임을 직감했네. 만약 장로와 이야기 해본다면 당신도 이해할거야, =player.formalAddressTerm= =player.apparentSpecies=(이)여.
 			</text>      
     </node>
     <node ID="AboutTheDromad">
       <text>
-				I am dromad, =player.apparentSpecies= =player.formalAddressTerm=. Some say saltstrider. Do you know this?
+				나는 dromad라네 =player.apparentSpecies= =player.formalAddressTerm=(이)여. 다른 이들은 소금걸이라고 부르더군. 알고 있나?
 			</text>
-			<choice Target="AboutTheDromad2">I do.</choice>
-			<choice Target="AboutTheDromad2">I do not.</choice>
+			<choice Target="AboutTheDromad2">알고있어.</choice>
+			<choice Target="AboutTheDromad2">모르겠어.</choice>
     </node>
 		<node ID="AboutTheDromad2" Inherits="Welcome">
 			<text>
-				My people have walked the salt for thousands of years, meeting every creature that lives and thinks. From Pale Sea to the marsh of Joppa, and under the Hanging Hills, our chests are drawn.
+				수천년간 우리의 동족은 소금의 땅을 떠돌았고, 살아있고 생각하는 모든 존재를 만나왔네. 그저 우리의 가슴이 이끄는대로 페일 씨 부터 Joppa의 습지까지, 그리고 행잉 힐스 지하로도.
 			</text>
 		</node>
   </conversation>
@@ -718,16 +718,16 @@
   <conversation ID="DromadTrader">
     <node ID="Start">
       <text>
-				=player.apparentSpecies=? We are greeted! What do you desire?
+				=player.apparentSpecies=? 환영하네!. 원하는게 뭔가?
 			</text>      
-      <choice Target="AboutTheDromad">What kind of creature are you?</choice>
-      <choice Target="End">I desire nothing. Live and drink.</choice>
+      <choice Target="AboutTheDromad">당신은 어떤 종족이지?</choice>
+      <choice Target="End">원하는건 없어. 살고 마시게.</choice>
     </node>
     <node ID="AboutTheDromad">
       <text>
-				I am dromad, =player.apparentSpecies= =player.formalAddressTerm=. Some say saltstrider. Do you know this?
+				나는 dromad라네 =player.apparentSpecies= =player.formalAddressTerm=(이)여. 다른 이들은 소금걸이라고 부르더군. 알고 있나?
 			</text>
-      <choice GotoID="End">Live and drink.</choice>
+      <choice GotoID="End">살고 마시게.</choice>
     </node>
   </conversation>
 
