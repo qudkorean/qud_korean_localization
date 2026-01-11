@@ -438,7 +438,7 @@
 			<choice Target="GyreReminder" IfFinishedQuest="What's Eating the Watervine?">Gyre와 Girsh 네피림에 대해 다시 말해줄 수 있나?</choice>
       <choice Target="Stiltbound" IfHaveQuest="O Glorious Shekhinah!">Six Day Stilt에 대해 알고 있는게 있나?</choice>
       <choice Target="Barathrumites" IfHaveQuest="A Canticle for Barathrum">Argyve가 나보고 Barathrumites를 만나보라더군.</choice>
-			<choice GotoID="End">Live and drink.</choice>
+			<choice GotoID="End">살고 마시게.</choice>
 		</start>
 		<node ID="Joppa" Inherits="Start">
 			<text>
